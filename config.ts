@@ -7,7 +7,7 @@ export const DATABASE = {
   password: 'plaintextpassword',
   logging: false,
   synchronize: false,
-  entities: [`./models/**/*.ts`],
+  entities: ['./models/**/*.ts'],
   migrations: ['./migrations/**/*.ts'],
   cli: {
     migrationsDir: './migrations',
