@@ -7,6 +7,6 @@ export const DATABASE = {
   password: 'plaintextpassword',
   logging: false,
   synchronize: false,
-  entities: ['./src/models/**/*.ts'],
+  entities: [__dirname + '/src/models/**/*.{ts,js}'],
   ssl: false,
 };

@@ -1,7 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es2019",
     "module": "commonjs",
-    "experimentalDecorators": true
-  }
+    "experimentalDecorators": true,
+    "sourceMap": true,
+    "declaration": true,
+    "incremental": true,
+    "outDir": "./dist"
+  },
+  "include": ["./src/**/*"]
 }
