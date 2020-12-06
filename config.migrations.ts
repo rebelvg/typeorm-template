@@ -10,10 +10,13 @@ const {
   logging,
   synchronize,
   entities,
-  migrations,
-  cli,
   ssl,
 } = DATABASE;
+
+const migrations = ['./migrations/**/*.ts'];
+const cli = {
+  migrationsDir: './migrations',
+};
 
 export {
   type,

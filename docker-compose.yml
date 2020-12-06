@@ -1,9 +1,9 @@
 version: '3.7'
 
 services:
-  typeorm-db:
+  postgres:
     image: postgres:10-alpine
-    container_name: typeorm-db
+    container_name: postgres
     restart: on-failure
     init: true
     ports:
