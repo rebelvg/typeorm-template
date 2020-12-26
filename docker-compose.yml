@@ -1,14 +1,15 @@
 version: '3.7'
 
 services:
-  postgres:
+  typeorm_template:
     image: postgres:10-alpine
-    container_name: postgres
+    container_name: typeorm_template
     restart: on-failure
     init: true
     ports:
       - 5432:5432
     volumes:
+      - typeorm_template:/var/lib/postgresql/data
       - ./db_init:/docker-entrypoint-initdb.d
     environment:
       POSTGRES_USER: typeorm
@@ -26,3 +27,6 @@ services:
       timeout: 5s
       retries: 5
       start_period: 15s
+
+volumes:
+  typeorm_template:

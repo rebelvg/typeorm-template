@@ -4,9 +4,11 @@
   "main": "dist/src/index.js",
   "license": "MIT",
   "scripts": {
-    "migrate": "node --require ts-node/register ./node_modules/typeorm/cli.js migration:run --config config.migrations.ts",
-    "migrate:generate": "node --require ts-node/register ./node_modules/typeorm/cli.js migration:generate --config config.migrations.ts -n",
-    "migrate:undo": "node --require ts-node/register ./node_modules/typeorm/cli.js migration:revert --config config.migrations.ts",
+    "typeorm:cli": "node --require ts-node/register ./node_modules/typeorm/cli.js",
+    "migrate": "yarn run typeorm:cli migration:run --config config.migrations.ts",
+    "migrate:create": "yarn run typeorm:cli migration:create --config config.migrations.ts -n",
+    "migrate:generate": "yarn run typeorm:cli migration:generate --config config.migrations.ts -n",
+    "migrate:undo": "yarn run typeorm:cli migration:revert --config config.migrations.ts",
     "build": "tsc",
     "start:dev": "ts-node src/",
     "start": "yarn run build && node ."
