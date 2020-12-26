@@ -5,8 +5,8 @@ export const DATABASE = {
   database: 'typeorm',
   username: 'typeorm',
   password: 'plaintextpassword',
-  logging: false,
+  logging: true,
   synchronize: false,
-  entities: [__dirname + '/src/models/**/*.{ts,js}'],
   ssl: false,
+  entities: [__dirname + '/models/*.{ts,js}'],
 };

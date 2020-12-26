@@ -10,7 +10,7 @@ services:
       - 5432:5432
     volumes:
       - typeorm_template:/var/lib/postgresql/data
-      - ./db_init:/docker-entrypoint-initdb.d
+      - ./docker:/docker-entrypoint-initdb.d
     environment:
       POSTGRES_USER: typeorm
       POSTGRES_PASSWORD: plaintextpassword

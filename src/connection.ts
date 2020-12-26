@@ -1,7 +1,7 @@
 import { Connection, createConnection, Repository } from 'typeorm';
 import { PostgresConnectionOptions } from 'typeorm/driver/postgres/PostgresConnectionOptions';
 
-import { DATABASE } from '../config';
+import { DATABASE } from './config';
 
 let connection: Connection | undefined;
 

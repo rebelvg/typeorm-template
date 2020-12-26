@@ -1,4 +1,4 @@
-import { DATABASE } from './config';
+import { DATABASE } from './src/config';
 
 const {
   type,
@@ -9,10 +9,10 @@ const {
   password,
   logging,
   synchronize,
-  entities,
   ssl,
 } = DATABASE;
 
+const entities = [__dirname + '/src/models/**/*.{ts,js}'];
 const migrations = ['./migrations/**/*.ts'];
 const cli = {
   migrationsDir: './migrations',
